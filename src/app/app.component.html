@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="input-block">
+    <form #myForm="ngForm" class="client-data" (ngSubmit)="onSubmitForm()">
+      <div class="input-wrapper">
+        <label class="client-data-label">Количество километров</label>
+        <input [(ngModel)]="distance" type="text" class="client-data-input" name="clientDistance" required>
+      </div>
+      <p *ngIf="!distance" class="warning">введите расстояние</p>
+      <div class="input-wrapper">
+        <label class="client-data-label">Возраст</label>
+        <input [(ngModel)]="age" type="text" class="client-data-input" name="clientAge" required>
+      </div>
+      <p *ngIf="!age" class="warning">введите возраст пассажира</p>
+      <div class="input-wrapper">
+        <label class="client-data-label">Вес багажа</label>
+        <input [(ngModel)]="luggageWeight" type="text" class="client-data-input" name="clientLuggage" required>
+      </div>
+      <p *ngIf="!luggageWeight" class="warning">введите вес багажа</p>
+      <button type="submit" class="submit-button" [disabled]="myForm.invalid">Рассчитать</button>
+    </form>
+  </div>
+  <div class="output-block">
+    <h1 *ngIf="aeroflotRates.length > 0 && rzdRates.length > 0" class="title">Предложения:</h1>
+    <h2 *ngIf="aeroflotRates.length > 0" class="title">Аэрофлот</h2>
+    <ul class="aeroflot-block">
+      <li *ngFor="let rate of aeroflotRates" class="rate-price">{{ rate.name }}: {{ rate.value | number }}₽</li>
+    </ul>
+    <h2 *ngIf="rzdRates.length > 0" class="title">РЖД</h2>
+    <ul class="rzd-block">
+      <li *ngFor="let rate of rzdRates" class="rate-price">{{ rate.name }}: {{ rate.value | number }}₽</li>
+    </ul>
+  </div>
+</div>
