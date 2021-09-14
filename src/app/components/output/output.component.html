@@ -1,0 +1,11 @@
+<div class="output-block">
+  <h1 *ngIf="aeroflotRates.length > 0 && rzdRates.length > 0" class="title">Предложения:</h1>
+  <h2 *ngIf="aeroflotRates.length > 0" class="title">Аэрофлот</h2>
+  <ul class="aeroflot-block">
+    <li *ngFor="let rate of aeroflotRates" class="rate-price">{{ rate.name }}: {{ rate.value | number }}₽</li>
+  </ul>
+  <h2 *ngIf="rzdRates.length > 0" class="title">РЖД</h2>
+  <ul class="rzd-block">
+    <li *ngFor="let rate of rzdRates" class="rate-price">{{ rate.name }}: {{ rate.value | number }}₽</li>
+  </ul>
+</div>

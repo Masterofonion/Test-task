@@ -1,0 +1,11 @@
+.input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .client-data-input {
+    width: 350px;
+    height: 25px;
+    padding-left: 5px;
+    font-size: 15px;
+  }
+}

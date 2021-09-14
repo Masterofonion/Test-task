@@ -1,0 +1,5 @@
+<div class="input-wrapper">
+  <label class="client-data-label">{{ title }}</label>
+  <input [(ngModel)]="value" type="number" class="client-data-input" name="clientData"
+    (ngModelChange)='onValueChanged.emit(value)'>
+</div>

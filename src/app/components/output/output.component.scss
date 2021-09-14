@@ -1,0 +1,36 @@
+:host {
+  width: 100%;
+}
+.output-block {
+  align-self: start;
+  width: 100%;
+  .title {
+    font-size: 20px;
+    background-color: rgb(219, 219, 219);
+    width: 100%;
+    padding: 5px;
+    border: 1px solid rgb(128, 128, 255);
+  }
+  h1.title {
+    background-color: #fff;
+    border: 0;
+    padding: 20px 0;
+
+  }
+  .rate-price {
+    list-style: none;
+    padding: 5px;
+    border: 1px solid rgb(128, 128, 255);
+    border-top: 0;
+    &:first-child {
+      border-bottom: 1px solid rgb(128, 128, 255);
+    }
+  }
+  .aeroflot-block {
+    .rate-price {
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}

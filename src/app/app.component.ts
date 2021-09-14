@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { AeroflotKilometerCost, RateName, RzdKilometerCost } from './enums';
+import { AeroflotKilometerCost, FormInputTitle, RateName, RzdKilometerCost } from './enums';
 import { IRate } from './interfaces/rate-value.interface';
 
 @Component({
@@ -8,6 +8,8 @@ import { IRate } from './interfaces/rate-value.interface';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
+  titles = FormInputTitle;
 
   distance = '';
 
@@ -110,5 +112,14 @@ export class AppComponent {
         }
       );
     }
+  }
+  setDistance(value: string) {
+    this.distance = value;
+  }
+  setLuggageWeight(value: string) {
+    this.luggageWeight = value;
+  }
+  setAge(value: string) {
+    this.age = value;
   }
 }

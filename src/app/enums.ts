@@ -15,3 +15,9 @@ export enum RateName {
   advanced = 'Продвинутый',
   lux = 'Люкс'
 }
+
+export enum FormInputTitle {
+  distance = 'Количество километров',
+  age = 'Возраст',
+  luggageWeight = 'Вес багажа'
+}
